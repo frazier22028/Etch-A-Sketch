@@ -1,27 +1,28 @@
-.bg-red{
-    background-color: purple;
+:root{
+  --row: 20%;
+  --cols: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto 
 }
-#grid-container {
 
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
-    background-color: purple;
-    margin: 5%;
+#grid-container {
+    display: flex;
+    max-height: 90vh;
+    max-width: 90vw;
 
 
     
   }
   .grid-item {
     background-color: rgba00(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
+    border: 0.5px solid rgba(0, 0, 0, 0.8);
+    height: 17px;
+    width: 17px;
+
+    
   }
   .item1 {
      grid-column-start: 1;
      grid-column-end: 3;
   }
   .mouse-over{
-      background-color: yellow;
+      background-color: #22ddca;
   }
