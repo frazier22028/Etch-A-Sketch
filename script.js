@@ -15,6 +15,18 @@ document.querySelector("#btn").addEventListener('click', () => {
 console.log(autos)
 root.style.setProperty('--cols',autos);
 
+function getRandomColor() {
+    var letters = '0123456789ABCDEF';
+    var color = '#';
+    for (var i = 0; i < 6; i++) {
+      color += letters[Math.floor(Math.random() * 16)];
+    }
+    return color;
+  }
+  function setRandomColor() {
+    $("#colorpad").css("background-color", getRandomColor());
+  }
+
 function buildGridFunction(){
 
 
@@ -26,7 +38,8 @@ for(let j =0;j<numOfTimes;j++) {
         singleCell.style.color = "black";
         singleCell.classList.add("grid-item")
         singleCell.addEventListener("mouseover", () => {
-            singleCell.classList.add("mouse-over");
+
+            singleCell.style.backgroundColor = getRandomColor();
         });
         row.appendChild(singleCell);
     }
